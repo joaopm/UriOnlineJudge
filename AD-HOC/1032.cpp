@@ -13,6 +13,7 @@ int josephus(int n, int k) {
     k = primeNumbers[GLOBAL_COUNTER++];
     return ((josephus(n - 1, k) + k - 1) % n) + 1;
 }
+
 int main() {
     for (int i = 2; i <= 32621; i++) {
         if (i > 3) {
@@ -30,7 +31,9 @@ int main() {
             primeNumbers.push_back(i);
         }
     }
+	
     int num;
+	
     while (cin >> num) {
         if (num > 0) {
             GLOBAL_COUNTER = 0;
